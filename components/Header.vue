@@ -53,6 +53,6 @@ a {
   height: auto;
 } */
 .header-ph img {
-  width: 100vw;
+  width: 100vh;
 }
 </style>

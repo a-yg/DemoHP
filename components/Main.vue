@@ -23,8 +23,55 @@ export default defineComponent({
         title: 'カタログページを公開しました。'
       }
     ])
+    const shopLists = ref([
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+      {
+      title: "AAAAAA",
+      text: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+      },
+    ])
     return {
-      items
+      items,
+      shopLists
     }
   },
 })
@@ -48,6 +95,27 @@ export default defineComponent({
     <div class="shop">
       <!-- <iframe src="https://www.youtube.com/watch?v=ssPoe6_hjyI"></iframe> -->
       <iframe width="100%" height="600" src="https://youtu.be/ssPoe6_hjyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="lists">
+        <ul class="shop-list">
+          <li v-for="shopList in shopLists" :key="shopList">
+            <img src="../img/shop-list.png"><br>
+          <a href="#">{{shopList.title}}<br>
+          {{shopList.text}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <a href="#">ショプ一覧へ</a>
+      </div>
+    </div>
+    <h2 class="title">シェア</h2>
+    <div class="shea">
+      <a href="https://twitter.com/intent/tweet?url=https://mall.vketlink.com/&text=【VketMall Proto】 バーチャルな時を共に過ごすお店。人々の日常に、きらめくひとひらの出会いを添えて。開催期間：2021年8月14日～2021年8月28日">
+      <img src="../img/twitter.png" class="twitter">
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://mall.vketlink.com/&amp;t=【VketMall Proto】 バーチャルな時を共に過ごすお店。人々の日常に、きらめくひとひらの出会いを添えて。開催期間：2021年8月14日～2021年8月28日">
+      <img src="../img/facebook.png" class="facebook">
+      </a>
     </div>
   </div>
 </template>
@@ -90,5 +158,50 @@ export default defineComponent({
 }
 .news {
   margin-bottom: 100px;
+}
+
+.shop-list {
+  margin: 30px 60px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+}
+.shop-list > li {
+  word-wrap: break-word;
+  width: 24%;
+  margin: 20px 0;
+  padding: 50px 30px;
+  border: solid 2px black;
+  border-radius: 15px;
+  text-align: center;
+  /* background-image: linear-gradient(-45deg,#000 25%,transparent 0,transparent 50%,#000 0,#000 75%,transparent 0,transparent);
+  background-repeat: repeat;
+  background-size: 6px 6px;
+  z-index: -1; */
+}
+.shop-list > li > img {
+  width: 100%;
+}
+.shop-list > li > a {
+  text-decoration: none;
+  color: black;
+}
+.shea {
+  align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: flex-start;
+    gap: 30px;
+    margin: 50px 10px;
+}
+.twitter{
+  width: 60px;
+  border-radius: 50px;
+}
+.facebook {
+  width: 60px;
 }
 </style>

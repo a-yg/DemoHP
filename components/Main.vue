@@ -1,14 +1,18 @@
 <script lang='ts'>
 import { defineComponent } from '@nuxtjs/composition-api'
-import {ref, Ref} from 'vue'
+import {ref} from 'vue'
+
+// type Item = {
+//   item:[
+//     {
+//       date: string
+//       title: string
+//     }
+//   ]
+// }
 
 export default defineComponent({
   setup() {
-
-  //   type Item = {
-  //   date: string,
-  //   title: string,
-  // }
     const items = ref([
       {
         date: '2021/08/28',

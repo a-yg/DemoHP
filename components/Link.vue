@@ -44,4 +44,8 @@
 .img {
   width: 36%;
 }
+.link1 > img:hover, .link2 > img:hover, .link3 > img:hover {
+  filter: opacity(70%);
+  cursor: pointer;
+}
 </style>

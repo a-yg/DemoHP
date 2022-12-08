@@ -71,7 +71,7 @@ p {
     line-height: 20px;
 }
 .footer {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   background: linear-gradient(180deg,#00afaf,#005858);
   padding: 52px 15% 1px;
   position: relative;
@@ -116,7 +116,7 @@ p {
 .footer-ph {
   position: absolute;
   right: 370px;
-  bottom: 60px;
+  bottom: 20px;
 }
 .footer-text {
   text-align: center;

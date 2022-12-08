@@ -15,14 +15,17 @@ export default defineComponent({
   setup() {
     const items = ref([
       {
+        id: 0,
         date: '2021/08/28',
         title: 'VketMall Protoは8/28に終了しました'
       },
       {
+        id: 1,
         date: '2021/08/14',
         title: 'VketMall Protoがオープンしました!'
       },
       {
+        id: 2,
         date: '2021/08/14',
         title: 'カタログページを公開しました。'
       }

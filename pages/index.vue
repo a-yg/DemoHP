@@ -1,28 +1,51 @@
 <template>
   <div>
+    <Header2 />
     <Header />
-    <Button />
     <Link />
     <Main />
-    <Footer />
+    <Button :footerHeight="footerHeight"/>
+    <div ref="footer">
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import 'normalize.css'
 import Header from '../components/Header.vue'
+import Header2 from '../components/Header2.vue'
 import Link from '../components/Link.vue'
 import Main from '../components/Main.vue'
 import Footer from '../components/Footer.vue'
 import Button from '../components/Button.vue'
 
-export default {
+import { defineComponent, onMounted } from '@nuxtjs/composition-api'
+import { ref, nextTick } from 'vue'
+
+
+export default defineComponent({
   components: {
     Header,
+    Header2,
     Link,
     Main,
     Footer,
     Button
+  },
+  setup() {
+    const footer = ref();
+    const footerHeight = ref(0)
+    onMounted(() => {
+      nextTick(() => {
+        footerHeight.value = footer.value.clientHeight
+      })
+    })
+
+    return {
+      footer,
+      footerHeight,
+    }
   }
-}
+})
 </script>

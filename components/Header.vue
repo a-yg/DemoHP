@@ -2,53 +2,22 @@
 import { defineComponent, onMounted } from '@nuxtjs/composition-api'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {ref} from 'vue'
-import DropDown from '../components/DropDown.vue'
+import DropDown1 from '../components/DropDown1.vue'
+import DropDown2 from '../components/DropDown2.vue'
+import DropDown3 from '../components/DropDown3.vue'
 
 export default defineComponent({
   components: {
-    DropDown
+    DropDown1,
+    DropDown2,
+    DropDown3
   },
   setup() {
-    // type Item = {
-    //   url: string
-    //   title: string
-    // }
-
-    // const img1 = ref()
-    // img1.value = "../img/logo.png"
     onMounted(() => {
       console.log('composition api')
     })
 
-    const services = ref([
-      {
-        url: "#",
-        title: "あああ"
-      },
-      {
-        url: "#",
-        title: "いいい"
-      },
-      {
-        url: "#",
-        title: "ううう"
-      },
-    ])
-
-    // const isOpen = ref(false)
-
-    // const mouseover = () => {
-    //   isOpen.value = true
-    // }
-    // const mouseleave = () => {
-    //   isOpen.value = false
-    // }
-
     return {
-      services,
-      // isOpen,
-      // mouseover,
-      // mouseleave
     }
   },
 })
@@ -61,12 +30,14 @@ export default defineComponent({
         <ul class="nav">
           <!-- <li><img src="../img/logo.png" alt="logo"></li>
           <li><a href="#">About</a></li> -->
-          <DropDown title="aaa" :items="services"/>
+          <DropDown1 />
+          <DropDown2 />
           <li><a href="#">来場方法</a></li>
           <li><a href="#">カタログ</a></li>
           <li><a href="#">ショップ</a></li>
           <li><a href="#">お問い合わせ</a></li>
           <li><a href="#"><i class="bi bi-person-circle"></i>出展者ログイン</a></li>
+          <DropDown3 />
           <!-- <li><a href="#"><i class="bi bi-globe-asia-australia"></i>Language</a></li> -->
         </ul>
     </nav>
@@ -161,7 +132,7 @@ a {
 }
 .header-ph2 {
   position: absolute;
-  bottom: 9%;
+  bottom: 11%;
   left: 25%;
 }
 .header-ph2 > a > img:hover {

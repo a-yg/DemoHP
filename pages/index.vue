@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header2 />
+    <!-- <Header2 /> -->
     <Header />
     <Link />
     <Main />
@@ -14,7 +14,7 @@
 <script lang="ts">
 import 'normalize.css'
 import Header from '../components/Header.vue'
-import Header2 from '../components/Header2.vue'
+// import Header2 from '../components/Header2.vue'
 import Link from '../components/Link.vue'
 import Main from '../components/Main.vue'
 import Footer from '../components/Footer.vue'
@@ -27,7 +27,7 @@ import { ref, nextTick } from 'vue'
 export default defineComponent({
   components: {
     Header,
-    Header2,
+    // Header2,
     Link,
     Main,
     Footer,

@@ -26,7 +26,7 @@ export default defineComponent({
 <template>
     <div class="news">
       <ul class="news-list">
-        <li v-for="item in detail" :key="item" @click="onNewsClick(item.id)">
+        <li v-for="item in detail" :key="item.item_id" @click="onNewsClick(item.id)">
           <span class="date">{{item.title}}<br></span>
           <span class="link-title">{{item.body}}</span>
         </li>

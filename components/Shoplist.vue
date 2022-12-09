@@ -28,7 +28,7 @@ export default defineComponent({
       <iframe width="100%" height="600" src="https://youtu.be/ssPoe6_hjyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="lists">
         <ul class="shop-list">
-          <li v-for="shopList in data" :key="shopList" @click="onShopClick(shopList.id)">
+          <li v-for="shopList in data" :key="shopList.shopList_id" @click="onShopClick(shopList.id)">
             <img :src="shopList.url"><br>
           {{shopList.url}}<br>
           {{shopList.title}}

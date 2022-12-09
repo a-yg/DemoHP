@@ -47,7 +47,7 @@ export default defineComponent({
           <p>About</p>
 
           <ul class="dropdown" :class="{isOpen}">
-            <li v-for="sub in navItems" :key="sub">
+            <li v-for="sub in navItems" :key="sub.sub_url">
               <a :href="sub.url">
                 {{ sub.title }}
               </a>

@@ -47,7 +47,7 @@ export default defineComponent({
           <img src="../img/logo.png" alt="logo" >
 
           <ul class="dropdown" :class="{isOpen}">
-            <li v-for="sub in navItems" :key="sub">
+            <li v-for="sub in navItems" :key="sub.sub_url">
               <a :href="sub.url">
                 {{ sub.title }}
               </a>

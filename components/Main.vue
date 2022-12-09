@@ -18,7 +18,7 @@ export default defineComponent({
       const url = "https://jsonplaceholder.typicode.com/posts"
       try {
       const response = await axios.get(url)
-      detail.value = response.data.slice(0,10)
+      detail.value = response.data.slice(0,5)
       console.log(detail.value, 'detail')
     } catch (error) {
         console.log("get失敗")

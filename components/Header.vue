@@ -132,7 +132,7 @@ a {
 }
 .header-ph2 {
   position: absolute;
-  bottom: 11%;
+  bottom: 10%;
   left: 25%;
 }
 .header-ph2 > a > img:hover {

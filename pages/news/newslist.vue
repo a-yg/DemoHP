@@ -1,39 +1,60 @@
 <script>
-import { computed, defineComponent, useRouter } from '@nuxtjs/composition-api'
+import { defineComponent, useRouter } from '@nuxtjs/composition-api'
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
 
 export default defineComponent({
-  props: ['detail'],
-  setup(props) {
+  setup() {
+    const detail = ref({})
     const router = useRouter()
+
+    onMounted( async () => {
+      const url = "https://jsonplaceholder.typicode.com/posts"
+      try {
+      const response = await axios.get(url)
+      detail.value = response.data
+      console.log(detail.value, 'detail/list')
+      } catch (error) {
+        console.log("get失敗")
+        } 
+    })
+
     const onNewsClick = (id) => {
       console.log(id, 'aa')
-      const params = props.detail.find(obj => id == obj.id)
+      const params = detail.value.find(obj => id == obj.id)
       console.log(params.id, "id")
       router.push({path:`/news/${params.id}`})
     }
-
+    
     return {
+      detail,
       onNewsClick,
     }
-  },
+  }
 })
 </script>
 
 <template>
     <div class="news">
+      <h2 class="title">お知らせ一覧</h2>
       <ul class="news-list">
         <li v-for="item in detail" :key="item.item_id" @click="onNewsClick(item.id)">
           <span class="date">{{item.title}}<br></span>
           <span class="link-title">{{item.body}}</span>
         </li>
       </ul>
-      <div class="list">
-        <router-link to="/news/newslist" class="on">お知らせ一覧へ</router-link>
-      </div>
   </div>
 </template>
 
 <style scoped>
+.title {
+  color: #ef7b1a;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: .05em;
+  line-height: 48px;
+  margin-bottom: 32px;
+}
 .news > ul {
   list-style-type: none;
 }

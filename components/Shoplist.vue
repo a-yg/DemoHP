@@ -36,7 +36,7 @@ export default defineComponent({
         </ul>
       </div>
       <div class="list">
-        <a href="/shop" class="on">ショプ一覧へ</a>
+        <router-link to="/shop" class="on">ショプ一覧へ</router-link>
       </div>
     </div>
 </template>

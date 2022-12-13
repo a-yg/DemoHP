@@ -55,7 +55,7 @@ export default defineComponent({
 }
 .button {
   position: sticky;
-  bottom: 10px;
+  bottom: 71px;
   display: flex;
   justify-content: end;
   padding-right: 20px;

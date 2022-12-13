@@ -2,12 +2,12 @@
 import { defineComponent, onMounted } from '@nuxtjs/composition-api'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {ref} from 'vue'
-import HeaderFocas from './HeaderFocas.vue'
+import HeaderFocus from './HeaderFocus.vue'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default defineComponent({
   components: {
-    HeaderFocas,
+    HeaderFocus,
   },
   setup() {
     onMounted(() => {
@@ -15,8 +15,10 @@ export default defineComponent({
     })
     const About = ref('About')
     const Language = ref('Language')
-    const image = ref
-    const icon = ref
+    const image = ref("")
+    image.value = require("../assets/img/logo.png")
+    const icon = ref("")
+    icon.value = ("bi bi-globe-asia-australia")
     const imgItems = ref([
       {
         url: "#",
@@ -79,16 +81,16 @@ export default defineComponent({
     <title>VketMall Proto</title>
     <nav id="nav">
         <ul class="nav">
-          <HeaderFocas :subitems="imgItems" :image="image" />
-          <!-- <li><img src="../assets/img/logo.png" alt="logo"></li>
+          <HeaderFocus :subitems="imgItems" :image="image" />
+          <!-- <li><img src="..//img/logo.png" alt="logo"></li>
           <li><a href="#">About</a></li> -->
-          <HeaderFocas :subitems="AboutItems" :title="About"/>
+          <HeaderFocus :subitems="AboutItems" :title="About"/>
           <li><a href="#">来場方法</a></li>
           <li><a href="#">カタログ</a></li>
           <li><a href="#">ショップ</a></li>
           <li><a href="#">お問い合わせ</a></li>
           <li><a href="#"><i class="bi bi-person-circle"></i>出展者ログイン</a></li>
-          <HeaderFocas :subitems="LanguageItems" :title="Language" :icon="icon" />
+          <HeaderFocus :subitems="LanguageItems" :title="Language" :icon="icon" />
           <!-- <li><a href="#"><i class="bi bi-globe-asia-australia"></i>Language</a></li> -->
         </ul>
     </nav>
@@ -110,16 +112,19 @@ header {
 .nav > li > a > i {
   margin: 2px;
 }
+#nav {
+  position: relative;
+  margin: 0;
+}
 #nav ul {
+  /* position: relative; */
   list-style: none;
   align-items: center;
-  margin: 8px 20%;
+  margin: 0px 20%;
   font-size: 14px;
   text-decoration: none;
 }
-.nav > li > img {
-  width: 70px;
-}
+
 .nav > li:hover {
   filter: opacity(70%);
   cursor: pointer;
@@ -131,6 +136,8 @@ header {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    position: relative;
+    margin: 10px;
 }
 /* .nav > li > span {
     position: relative;
@@ -183,7 +190,7 @@ a {
 }
 .header-ph2 {
   position: absolute;
-  bottom: 10%;
+  bottom: 164px;
   left: 25%;
 }
 .header-ph2 > a > img:hover {

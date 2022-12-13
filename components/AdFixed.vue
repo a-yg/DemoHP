@@ -43,7 +43,7 @@ export default defineComponent({
   <div ref="button" class="button" v-if="isDisplay">
     <!-- <div class="button2"> -->
       <button @click="onDelete">×</button>
-      <a href="https://vket6.v-market.work/"><img src="../img/button.png"></a>
+      <a href="https://vket6.v-market.work/"><img src="../assets/img/button.png"></a>
     <!-- </div> -->
   </div>
 </template>

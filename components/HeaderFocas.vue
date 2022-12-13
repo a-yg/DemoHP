@@ -7,7 +7,7 @@ export default defineComponent({
   setup() {
     const isOpen = ref(false)
     const img = ref()
-    img.value = require("../img/logo.png")
+    img.value = require("../assets/img/logo.png")
 
     const mouseover = () => {
       isOpen.value = true
@@ -33,8 +33,10 @@ export default defineComponent({
         <span
           @mouseover="mouseover"
           >
+        <div class="nav">
           <span v-if="image"><img :src="img"></span>
           <span v-if="icon"><i class="bi bi-globe-asia-australia"></i></span>{{title}}
+        </div>
 
           <ul class="dropdown" :class="{isOpen}">
             <li v-for="sub in subitems" :key="sub.sub_url">
@@ -92,17 +94,13 @@ p:hover, .dropdown li:hover {
     transform: rotate(90deg);
 } */
 .dropdown {
-    /* position: absolute; */
-    display: none;
     list-style-type: none;
-    /* z-index: 5; */
     background: linear-gradient(180deg,#00afaf,#005858);
     bottom: -29px;
     box-shadow: 0 8px 11px rgb(0 0 0 / 16%);
     left: 50%;
     padding: 23px 33px 24px 24px;
     position: absolute;
-    /* position: relative; */
     -webkit-transform: translate(-50%,100%);
     transform: translate(-50%,100%);
     width: -webkit-fit-content;

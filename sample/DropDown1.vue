@@ -44,7 +44,7 @@ export default defineComponent({
         <span
           @mouseover="mouseover" @mouseleave="mouseleave"
           >
-          <img src="../img/logo.png" alt="logo" >
+          <img src="../assets/img/logo.png" alt="logo" >
 
           <ul class="dropdown" :class="{isOpen}">
             <li v-for="sub in navItems" :key="sub.sub_url">

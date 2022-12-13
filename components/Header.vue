@@ -80,7 +80,7 @@ export default defineComponent({
     <nav id="nav">
         <ul class="nav">
           <HeaderFocas :subitems="imgItems" :image="image" />
-          <!-- <li><img src="../img/logo.png" alt="logo"></li>
+          <!-- <li><img src="../assets/img/logo.png" alt="logo"></li>
           <li><a href="#">About</a></li> -->
           <HeaderFocas :subitems="AboutItems" :title="About"/>
           <li><a href="#">来場方法</a></li>
@@ -93,11 +93,11 @@ export default defineComponent({
         </ul>
     </nav>
     <div class="header-ph">
-      <img src="../img/header-ph.png" alt="header-ph">
+      <img src="../assets/img/header-ph.png" alt="header-ph">
     </div>
     <div class="header-ph2">
       <!-- target="_blank"：別タブで開く -->
-    <a href="https://winter2021.vket.com/" target="_blank"><img src="../img/link1.jpg"></a>
+    <a href="https://winter2021.vket.com/" target="_blank"><img src="../assets/img/link1.jpg"></a>
     </div>
   </header>
 </template>

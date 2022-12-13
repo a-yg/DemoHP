@@ -34,9 +34,9 @@
     </div>
     <div class="link5">
       <p>公式SNS</p>
-      <a href="#" class="twitter"><span><img src="../img/twitter.png"></span><span>twitter</span></a>
-      <a href="#" class="youtube"><span><img src="../img/youtube.png"></span><span>youtube</span></a>
-      <a href="#" class="facebook"><span><img src="../img/facebook.png"></span><span>facebook</span></a>
+      <a href="#" class="twitter"><span><img src="../assets/img/twitter.png"></span><span>twitter</span></a>
+      <a href="#" class="youtube"><span><img src="../assets/img/youtube.png"></span><span>youtube</span></a>
+      <a href="#" class="facebook"><span><img src="../assets/img/facebook.png"></span><span>facebook</span></a>
     </div>
   </div>
   <div class="footer2">
@@ -45,8 +45,8 @@
       <p>©︎HIKKY Co.Ltd All right reserverd.</p>
     </div>
     <div class="footer-ph">
-      <img src="../img/footer1.png">
-      <a href="#"><img src="../img/footer2.png"></a>
+      <img src="../assets/img/footer1.png">
+      <a href="#"><img src="../assets/img/footer2.png"></a>
     </div>
   </div>
 </div>

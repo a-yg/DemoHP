@@ -59,10 +59,10 @@ export default defineComponent({
     <h2 class="title">シェア</h2>
     <div class="shea">
       <a href="https://twitter.com/intent/tweet?url=https://mall.vketlink.com/&text=【VketMall Proto】 バーチャルな時を共に過ごすお店。人々の日常に、きらめくひとひらの出会いを添えて。開催期間：2021年8月14日～2021年8月28日">
-      <img src="../img/twitter.png" class="twitter">
+      <img src="../assets/img/twitter.png" class="twitter">
       </a>
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://mall.vketlink.com/&amp;t=【VketMall Proto】 バーチャルな時を共に過ごすお店。人々の日常に、きらめくひとひらの出会いを添えて。開催期間：2021年8月14日～2021年8月28日">
-      <img src="../img/facebook.png" class="facebook">
+      <img src="../assets/img/facebook.png" class="facebook">
       </a>
     </div>
   </div>

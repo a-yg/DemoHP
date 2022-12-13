@@ -2,18 +2,18 @@
   <div>
     <div class="link">
       <div class="link1">
-        <img src="../img/link2.png" alt="">
-        <img src="../img/link3.png" alt="">
-        <img src="../img/link4.png" alt="">
+        <img src="../assets/img/link2.png" alt="">
+        <img src="../assets/img/link3.png" alt="">
+        <img src="../assets/img/link4.png" alt="">
       </div>
       <div class="link2">
-        <img src="../img/link5.png" alt="">
-        <img src="../img/link6.jpg" alt="">
+        <img src="../assets/img/link5.png" alt="">
+        <img src="../assets/img/link6.jpg" alt="">
       </div>
       <div class="link3">
-        <img src="../img/link7.png" alt="">
-        <img src="../img/link8.png" alt="">
-        <img src="../img/message.png" class="img" alt="">
+        <img src="../assets/img/link7.png" alt="">
+        <img src="../assets/img/link8.png" alt="">
+        <img src="../assets/img/message.png" class="img" alt="">
       </div>
     </div>
   </div>

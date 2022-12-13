@@ -33,7 +33,7 @@ export default defineComponent({
         <li><a href="#"><i class="bi bi-globe-asia-australia"></i>Language</a></li>  -->
         <li @click="isOpen = !isOpen" @mouseover="mouseover"
           @mouseleave="mouseleave"
-          class="menu"><img src="../img/logo.png" alt="logo"></li>
+          class="menu"><img src="../assets/img/logo.png" alt="logo"></li>
       </ul>
     <div>
       <ul class="sub-menu" :class="{isOpen}">

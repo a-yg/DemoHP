@@ -2,12 +2,12 @@
 import { defineComponent, onMounted } from '@nuxtjs/composition-api'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {ref} from 'vue'
-import DropDown from './DropDown.vue'
+import HeaderFocas from './HeaderFocas.vue'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default defineComponent({
   components: {
-    DropDown,
+    HeaderFocas,
   },
   setup() {
     onMounted(() => {
@@ -79,16 +79,16 @@ export default defineComponent({
     <title>VketMall Proto</title>
     <nav id="nav">
         <ul class="nav">
-          <DropDown :subitems="imgItems" :image="image" />
+          <HeaderFocas :subitems="imgItems" :image="image" />
           <!-- <li><img src="../img/logo.png" alt="logo"></li>
           <li><a href="#">About</a></li> -->
-          <DropDown :subitems="AboutItems" :title="About"/>
+          <HeaderFocas :subitems="AboutItems" :title="About"/>
           <li><a href="#">来場方法</a></li>
           <li><a href="#">カタログ</a></li>
           <li><a href="#">ショップ</a></li>
           <li><a href="#">お問い合わせ</a></li>
           <li><a href="#"><i class="bi bi-person-circle"></i>出展者ログイン</a></li>
-          <DropDown :subitems="LanguageItems" :title="Language" :icon="icon" />
+          <HeaderFocas :subitems="LanguageItems" :title="Language" :icon="icon" />
           <!-- <li><a href="#"><i class="bi bi-globe-asia-australia"></i>Language</a></li> -->
         </ul>
     </nav>

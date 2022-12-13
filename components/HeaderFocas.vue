@@ -31,7 +31,7 @@ export default defineComponent({
     <ul>
       <li>
         <span
-          @mouseover="mouseover" @mouseleave='mouseleave'
+          @mouseover="mouseover"
           >
           <span v-if="image"><img :src="img"></span>
           <span v-if="icon"><i class="bi bi-globe-asia-australia"></i></span>{{title}}
@@ -130,5 +130,8 @@ p:hover, .dropdown li:hover {
 }
 .isOpen {
     display: block;
+}
+i {
+  margin: 2px;
 }
 </style>

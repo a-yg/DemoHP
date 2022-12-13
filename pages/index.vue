@@ -2,9 +2,9 @@
   <div>
     <!-- <Header2 /> -->
     <Header />
-    <Link />
-    <Main />
-    <Button  />
+    <AdLink />
+    <SetLists />
+    <AdFixed  />
     <!-- :footerHeight="footerHeight" -->
     <!-- <div ref="footer"> -->
       <Footer />
@@ -16,10 +16,10 @@
 import 'normalize.css'
 import Header from '../components/Header.vue'
 // import Header2 from '../components/Header2.vue'
-import Link from '../components/Link.vue'
-import Main from '../components/Main.vue'
+import AdLink from '../components/AdLink.vue'
+import SetLists from '../components/SetLists.vue'
 import Footer from '../components/Footer.vue'
-import Button from '../components/Button.vue'
+import AdFixed from '../components/AdFixed.vue'
 
 import { defineComponent, onMounted, nextTick } from '@nuxtjs/composition-api'
 import { ref } from 'vue'
@@ -27,10 +27,10 @@ import { ref } from 'vue'
 export default defineComponent({
   components: {
     Header,
-    Link,
-    Main,
+    AdLink,
+    SetLists,
     Footer,
-    Button
+    AdFixed
   },
   setup() {
     // const footer = ref();

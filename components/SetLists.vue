@@ -2,14 +2,14 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 import {ref, onMounted, provide} from 'vue'
 import axios from 'axios'
-import NewsList from '../components/NewsList.vue'
-import Shoplist from '../components/Shoplist.vue'
+import NewsList from './NewsList.vue'
+import ShopList from './ShopList.vue'
 // import { useItems } from '../components/useItem.ts'
 
 export default defineComponent({
   components: {
     NewsList,
-    Shoplist
+    ShopList
   },
   setup () {
     const detail = ref({})
@@ -54,7 +54,7 @@ export default defineComponent({
     <NewsList :detail="detail"/>
 
     <h2 class="title">ショップ</h2>
-    <Shoplist :data="data"/>
+    <ShopList :data="data"/>
 
     <h2 class="title">シェア</h2>
     <div class="shea">

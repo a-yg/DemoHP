@@ -1,9 +1,12 @@
 <script>
-import { computed, defineComponent, useRouter } from '@nuxtjs/composition-api'
+import { defineComponent, useRouter } from '@nuxtjs/composition-api'
+// import { inject } from 'vue'
 
 export default defineComponent({
   props: ['detail'],
   setup(props) {
+    // const items = inject('items')
+    // console.log('inject item', items)
     const router = useRouter()
     const onNewsClick = (id) => {
       console.log(id, 'aa')
@@ -14,6 +17,8 @@ export default defineComponent({
 
     return {
       onNewsClick,
+      // items,
+      // addItems,
     }
   },
 })
@@ -22,6 +27,7 @@ export default defineComponent({
 <template>
     <div class="news">
       <ul class="news-list">
+        <!-- <li v-for="i in items" :key="i">{{i.title}}</li> -->
         <li v-for="item in detail" :key="item.item_id" @click="onNewsClick(item.id)">
           <span class="date">{{item.title}}<br></span>
           <span class="link-title">{{item.body}}</span>

@@ -1,19 +1,25 @@
 <script lang='ts'>
 import { defineComponent } from '@nuxtjs/composition-api'
-import {ref, onMounted} from 'vue'
+import {ref, onMounted, provide} from 'vue'
 import axios from 'axios'
 import NewsList from '../components/NewsList.vue'
 import Shoplist from '../components/Shoplist.vue'
+// import { useItems } from '../components/useItem.ts'
 
 export default defineComponent({
   components: {
     NewsList,
     Shoplist
   },
-  setup() {
+  setup () {
     const detail = ref({})
     const data = ref({})
-
+    // const test = ref()
+    // const { detail, fetchGetitems } = useItems();
+    //   await fetchGetitems();
+    //   test.value = 
+    //   await provide('items', detail.value)
+    //   console.log(detail.value, 'items!!!!!')
     onMounted( async () => {
       const url = "https://jsonplaceholder.typicode.com/posts"
       try {

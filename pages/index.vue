@@ -4,10 +4,11 @@
     <Header />
     <Link />
     <Main />
-    <Button :footerHeight="footerHeight"/>
-    <div ref="footer">
+    <Button  />
+    <!-- :footerHeight="footerHeight" -->
+    <!-- <div ref="footer"> -->
       <Footer />
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -20,32 +21,31 @@ import Main from '../components/Main.vue'
 import Footer from '../components/Footer.vue'
 import Button from '../components/Button.vue'
 
-import { defineComponent, onMounted } from '@nuxtjs/composition-api'
-import { ref, nextTick } from 'vue'
-
+import { defineComponent, onMounted, nextTick } from '@nuxtjs/composition-api'
+import { ref } from 'vue'
 
 export default defineComponent({
   components: {
     Header,
-    // Header2,
     Link,
     Main,
     Footer,
     Button
   },
   setup() {
-    const footer = ref();
-    const footerHeight = ref(0)
-    onMounted(() => {
-      nextTick(() => {
-        footerHeight.value = footer.value.clientHeight
-      })
-    })
+    // const footer = ref();
+    // const footerHeight = ref(0)
+    // onMounted(() => {
+    //   nextTick(() => {
+    //     footerHeight.value = footer.value.clientHeight
+    //   })
+    // })
 
     return {
-      footer,
-      footerHeight,
+    //   footer,
+    //   footerHeight,
     }
   }
 })
+
 </script>

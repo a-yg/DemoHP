@@ -2,22 +2,73 @@
 import { defineComponent, onMounted } from '@nuxtjs/composition-api'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {ref} from 'vue'
-import DropDown1 from '../components/DropDown1.vue'
-import DropDown2 from '../components/DropDown2.vue'
-import DropDown3 from '../components/DropDown3.vue'
+import DropDown from './DropDown.vue'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default defineComponent({
   components: {
-    DropDown1,
-    DropDown2,
-    DropDown3
+    DropDown,
   },
   setup() {
     onMounted(() => {
       console.log('composition api')
     })
+    const About = ref('About')
+    const Language = ref('Language')
+    const image = ref
+    const icon = ref
+    const imgItems = ref([
+      {
+        url: "#",
+        title: "さささ"
+      },
+      {
+        url: "#",
+        title: "ししし"
+      },
+      {
+        url: "#",
+        title: "すすす"
+      },
+    ])
+    const AboutItems = ref([
+      {
+        url: "#",
+        title: "あああ"
+      },
+      {
+        url: "#",
+        title: "いいい"
+      },
+      {
+        url: "#",
+        title: "ううう"
+      },
+    ])
+    const LanguageItems = ref([
+      {
+        url: "#",
+        title: "かかか"
+      },
+      {
+        url: "#",
+        title: "ききき"
+      },
+      {
+        url: "#",
+        title: "くくく"
+      },
+    ])
 
     return {
+      AboutItems,
+      About,
+      Language,
+      LanguageItems,
+      image,
+      imgItems,
+      icon,
+      // listImg
     }
   },
 })
@@ -28,16 +79,16 @@ export default defineComponent({
     <title>VketMall Proto</title>
     <nav id="nav">
         <ul class="nav">
+          <DropDown :subitems="imgItems" :image="image" />
           <!-- <li><img src="../img/logo.png" alt="logo"></li>
           <li><a href="#">About</a></li> -->
-          <DropDown1 />
-          <DropDown2 />
+          <DropDown :subitems="AboutItems" :title="About"/>
           <li><a href="#">来場方法</a></li>
           <li><a href="#">カタログ</a></li>
           <li><a href="#">ショップ</a></li>
           <li><a href="#">お問い合わせ</a></li>
           <li><a href="#"><i class="bi bi-person-circle"></i>出展者ログイン</a></li>
-          <DropDown3 />
+          <DropDown :subitems="LanguageItems" :title="Language" :icon="icon" />
           <!-- <li><a href="#"><i class="bi bi-globe-asia-australia"></i>Language</a></li> -->
         </ul>
     </nav>
